@@ -17,12 +17,12 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     
     // This code is only valid in newer ReactiveUI which is shipped since avalonia 11.2.0 
     private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel,
-        AlbumViewModel?> interaction)
+        SongViewModel?> interaction)
     {
         var dialog = new MusicStoreWindow();
         dialog.DataContext = interaction.Input;
 
-        var result = await dialog.ShowDialog<AlbumViewModel?>(this);
+        var result = await dialog.ShowDialog<SongViewModel?>(this);
         interaction.SetOutput(result);
     }
 }
