@@ -11,7 +11,7 @@ namespace Avalonia.MusicStore.ViewModels
     {
         public MainWindowViewModel()
         {
-            ShowDialog = new Interaction<MusicStoreViewModel, AlbumViewModel?>();
+            ShowDialog = new Interaction<MusicStoreViewModel, SongViewModel?>();
 
             BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
             {
@@ -23,6 +23,6 @@ namespace Avalonia.MusicStore.ViewModels
         
         public ICommand BuyMusicCommand { get; }
 
-        public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
+        public Interaction<MusicStoreViewModel, SongViewModel?> ShowDialog { get; }
     }
 }

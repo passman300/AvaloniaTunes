@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace Avalonia.MusicStore.Views;
 
-public partial class MusticStoreView : UserControl
+public partial class SongView : UserControl
 {
-    public MusticStoreView()
+    public SongView()
     {
         InitializeComponent();
     }

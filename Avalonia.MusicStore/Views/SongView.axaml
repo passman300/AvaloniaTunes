@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Avalonia.MusicStore.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalonia.MusicStore.Views.SongView"
+             x:DataType="vm:SongViewModel">
+    
+    <StackPanel Spacing="5" Width="200">
+        <Border CornerRadius="10" ClipToBounds="True">
+            <Panel Background="#7F52FF88">
+                <Image Width="200" Stretch="Uniform" Source="{Binding CoverImage}"/>
+                <Panel Height="200" IsVisible="{Binding CoverImage, Converter={x:Static ObjectConverters.IsNull}}">
+                    <PathIcon Height="75" Width="75" Data="{StaticResource music_regular}" />
+                </Panel>
+            </Panel>
+        </Border>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding Title}"/>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding Artist}"/>
+    </StackPanel>
+</UserControl>

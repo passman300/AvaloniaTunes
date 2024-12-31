@@ -1,7 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using ReactiveUI;
 
-namespace Avalonia.MusicStore.ViewModels;
-
-public class ViewModelBase : ObservableObject
+namespace Avalonia.MusicStore.ViewModels
 {
+    public class ViewModelBase : ReactiveObject
+    {
+    }
 }

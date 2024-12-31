@@ -9,11 +9,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Models\"/>
         <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="AspNet.Security.OAuth.Deezer" Version="9.0.0" />
         <PackageReference Include="Avalonia" Version="11.2.1"/>
         <PackageReference Include="Avalonia.Desktop" Version="11.2.1"/>
         <PackageReference Include="Avalonia.ReactiveUI" Version="11.2.1" />
@@ -25,6 +25,8 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
+        <PackageReference Include="E.Deezer" Version="5.0.0" />
+        <PackageReference Include="iTunesSearch" Version="1.0.44" />
         <PackageReference Include="ReactiveUI" Version="20.1.63" />
     </ItemGroup>
 </Project>
