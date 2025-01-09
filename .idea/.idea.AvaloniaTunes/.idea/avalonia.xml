@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AvaloniaTunes/App.axaml" value="AvaloniaTunes/AvaloniaTunes.csproj" />
+        <entry key="AvaloniaTunes/Assets/Icons.axaml" value="AvaloniaTunes/AvaloniaTunes.csproj" />
+        <entry key="AvaloniaTunes/Icons.axaml" value="AvaloniaTunes/AvaloniaTunes.csproj" />
+        <entry key="AvaloniaTunes/Views/HomePageView.axaml" value="AvaloniaTunes/AvaloniaTunes.csproj" />
+        <entry key="AvaloniaTunes/Views/MainWindow.axaml" value="AvaloniaTunes/AvaloniaTunes.csproj" />
+        <entry key="AvaloniaTunes/Views/SearchPageView.axaml" value="AvaloniaTunes/AvaloniaTunes.csproj" />
+        <entry key="AvaloniaTunes/Views/SongSimpleView.axaml" value="AvaloniaTunes/AvaloniaTunes.csproj" />
+        <entry key="AvaloniaTunes/Views/SongView.axaml" value="AvaloniaTunes/AvaloniaTunes.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
