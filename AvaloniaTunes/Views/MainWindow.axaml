@@ -1,0 +1,63 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaTunes.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaTunes.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaTunes">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    
+    <!-- Sidebar -->
+    <SplitView IsPaneOpen="{Binding IsPaneOpen}" 
+               CompactPaneLength="100" 
+               DisplayMode="CompactInline"
+               OpenPaneLength="200"
+               Background="#222831"
+               PaneBackground="#31363F">
+        
+        
+        <SplitView.Pane>
+            <StackPanel Spacing="10"
+                        Margin="5">
+                
+                <Button Command="{Binding TogglePaneCommand}">
+                    <PathIcon Data="{StaticResource data_bar_horizontal_regular}"></PathIcon>
+                </Button>
+                
+                <ListBox Margin="2" ItemsSource="{Binding Items}" 
+                         SelectedItem="{Binding SelectedListItem}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type vm:ListItemTemplate}">
+                            <StackPanel Spacing="10" Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+            </StackPanel>
+        </SplitView.Pane>
+        
+        <SplitView.Content>
+            <Border CornerRadius="10 0 0 0"
+                    Margin="20">
+                <TransitioningContentControl Content="{Binding CurrentPage}">
+                    
+                </TransitioningContentControl>
+            </Border>
+            
+
+        
+        </SplitView.Content>
+    </SplitView>
+    
+</Window>
