@@ -1,5 +1,7 @@
 # AvaloniaTunes
 
+![image](https://github.com/user-attachments/assets/72b3647a-5657-40fc-9fbf-f61ba1a523e5)
+
 
 ## Overview
 
